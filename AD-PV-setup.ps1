@@ -10,7 +10,7 @@ iwr 192.168.56.5:8080/admin-run-dspa -OutFile $DSPA
 iwr 192.168.56.5:8080/admin-run-adddpp -OutFile $ADDDPP
 iwr 192.168.56.5:8080/windapsearch-windows-amd64.exe $WINDAP
 Unblock-File $AD
-Expand-Archive $AD
+Expand-Archive $AD -Force
 Unblock-File .\ADModule\ADModule-master\Microsoft.ActiveDirectory.Management.dll
 Import-Module .\ADModule\ADModule-master\Microsoft.ActiveDirectory.Management.dll
 Unblock-File .\ADModule\ADModule-master\ActiveDirectory\ActiveDirectory.psd1
